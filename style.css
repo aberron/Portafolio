@@ -1,13 +1,14 @@
 /* Imports - Tipografía */
-@font-face { 
-  font-family: "Lab Grotesque";  
-  src: url(""), format("woff"); 
+@font-face {
+  font-family: "Lab Grotesque";
+  src: url("https: //res.cloudinary.com/dyk5cl3d8/raw/upload/v1649448006/Portafolio%20Web/LabGrotesque-Regular_lzdqfs.woff"), format("woff");
 }
 
-@font-face { 
-  font-family: "Lab Grotesque bold";  
-  src: url(""), format("woff"); 
+@font-face {
+  font-family: "Lab Grotesque bold";
+  src: url("https: //res.cloudinary.com/dyk5cl3d8/raw/upload/v1649448006/Portafolio%20Web/LabGrotesque-Regular_lzdqfs.woff"), format("woff");
 }
+
 /* Reset */
 *,
 *::before,
@@ -48,6 +49,7 @@ picture {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -87,6 +89,10 @@ body {
   color: var(--black);
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: var(--font-bold);
 }
