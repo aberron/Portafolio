@@ -216,29 +216,41 @@ padding:1vw;
 
 .header{
   padding:1vw;
+
 }
 .projects{
-  margin-top: 20px;
+  margin-top: 40px;
   padding:1vw;
   display: grid;
   grid-template-columns: 1fr 3.5fr;
-
 }
+.indice{
+  /* border: 2px solid; */
+  height:max-content;
+  position: sticky;
+  top: 60px;
+}
+
  .projects ul li:hover {
    text-decoration: underline;
  }
 
- .descripcion {
-   margin-top: 15px;
-   padding-right: 20px;
- }
-
 .content {
+  top: 60px;
   display: grid;
   grid-template-columns: 1.5fr 2fr;
-  margin-bottom: 40px;;
+  margin-bottom: 120px;
+}
+.content .texto{
+  height:max-content;
+    position: sticky;
+    top: 60px;
 }
 
+.descripcion {
+  margin-top: 15px;
+  padding-right: 20px;
+} 
 .fotos img{
 margin-top: 15px;
 margin-left: 15px;
