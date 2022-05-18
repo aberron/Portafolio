@@ -7,29 +7,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio Ana</title>
   <link rel="stylesheet" href="style.css">
+  <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
 <div class="header">
   <p>Ana Berrón</p>
 </div>
 
-<body>
+<body class="body-projects">
+
+
+  <li>Ana Berrón</li>
+  <li>
+    <a href="./projects.html">Projects </a>
+  </li>
+  <!-- <li>Contact</li> -->
+  <li>
+    <a href="#contact">Contact</a>
+  </li>
+  <li>
+    <a href="#about">About</a>
+  </li>
+  </ul>
+
+  <div x-data="{ open: false }" class="burger">
+    <button x-on:click="open = !open">
+      Toggle meter svg
+    </button>
+    <span x-show="open">
+      <ul class="indice-burger">
+        <a href="#ambulante">
+          <li>Ambulante</li>
+        </a>
+        <a href="#sacro">
+          <li>Sacro</li>
+        </a>
+        <a href="#tomo">
+          <li>TOMO lineup</li>
+        </a>
+        <a href="#mt">
+          <li>Typographic Manual</li>
+        </a>
+        <a href="#guia">
+          <li>A field guide to getting lost</li>
+        </a>
+        <a href="#rosa">
+          <li>Rosa Mística</li>
+        </a>
+        <a href="#chucho">
+          <li>Chucho Reyes</li>
+        </a>
+        <a href="#rs">
+          <li>Rashed & Smith</li>
+        </a>
+        <a href="#ada">
+          <li>Alfarería Doña Ana</li>
+        </a>
+        <a href="#fermenta">
+          <li>Fermenta</li>
+        </a>
+      </ul>
+    </span>
+  </div>
 
   <div class="projects">
     <ul class="indice">
-      <li>Ambulante</li>
-      <li>Sacro</li>
-      <li>TOMO lineup</li>
-      <li>Typographic Manual</li>
-      <li>A field guide to getting lost</li>
-      <li>Rosa Mística</li>
-      <li>Chucho Reyes</li>
-      <li>Rashed & Smith</li>
-      <li>Alfarería Doña Ana</li>
+      <a href="#ambulante">
+        <li>Ambulante</li>
+      </a>
+      <a href="#sacro">
+        <li>Sacro</li>
+      </a>
+      <a href="#tomo">
+        <li>TOMO lineup</li>
+      </a>
+      <a href="#mt">
+        <li>Typographic Manual</li>
+      </a>
+      <a href="#guia">
+        <li>A field guide to getting lost</li>
+      </a>
+      <a href="#rosa">
+        <li>Rosa Mística</li>
+      </a>
+      <a href="#chucho">
+        <li>Chucho Reyes</li>
+      </a>
+      <a href="#rs">
+        <li>Rashed & Smith</li>
+      </a>
+      <a href="#ada">
+        <li>Alfarería Doña Ana</li>
+      </a>
+      <a href="#fermenta">
+        <li>Fermenta</li>
+      </a>
     </ul>
     <div class="ficha">
       <!-- Ambulante -->
-      <div class="content">
+      <div class="content" id="ambulante">
         <div class="texto">
           <p>Ambulante</p>
           <p>2021</p>
@@ -67,7 +143,7 @@
         </div>
       </div>
       <!-- SACRO -->
-      <div class="content">
+      <div class="content" id="sacro">
         <div class="texto">
           <p>Sacro</p>
           <p>2021</p>
@@ -116,7 +192,7 @@
       </div>
       <!-- TOMO -->
       <div class="content">
-        <div class="texto">
+        <div class="texto" id="tomo">
           <p>TOMO Ediciones</p>
           <p>Lineup Poster for Material Art Fair Vol. 08</p>
           <p>2022</p>
@@ -154,7 +230,7 @@
         </div>
       </div>
       <!-- MANUAL TIPOGRAFICO -->
-      <div class="content">
+      <div class="content" id=mt>
         <div class="texto">
           <p>Typography Manual</p>
           <p>2021</p>
@@ -192,7 +268,7 @@
         </div>
       </div>
       <!-- A FIELD GUIDE TO GETTING LOST -->
-      <div class="content">
+      <div class="content" id="guia">
         <div class="texto">
           <p>A field guide to getting lost</p>
           <p>2020</p>
@@ -233,7 +309,7 @@
         </div>
       </div>
       <!-- ROSA MÍSTICA -->
-      <div class="content">
+      <div class="content" id="rosa">
         <div class="texto">
           <p>Rosa Mística</p>
           <p>2021</p>
@@ -278,10 +354,10 @@
         </div>
       </div>
       <!-- CHUCHO REYES-->
-      <div class="content">
+      <div class="content" id="chucho">
         <div class="texto">
-          <p>Rosa Mística</p>
-          <p>2021</p>
+          <p>Chucho Reyes</p>
+          <p>2022</p>
           <p class="descripcion">This project’s objective was to design a flowershop’s branding. The fictional shop I
             created
             was linked to my family
@@ -324,10 +400,10 @@
         </div>
       </div>
       <!-- RASHED & SMITH-->
-      <div class="content">
+      <div class="content" id="rs">
         <div class="texto">
-          <p>Rosa Mística</p>
-          <p>2021</p>
+          <p>Rashed & Smith</p>
+          <p>2022</p>
           <p class="descripcion">This project’s objective was to design a flowershop’s branding. The fictional shop I
             created
             was linked to my family
@@ -370,85 +446,78 @@
         </div>
       </div>
       <!-- ALFARERIA DOÑA ANA-->
-      <div class="content">
+      <div class="content" id="ada">
         <div class="texto">
-          <p>Rosa Mística</p>
+          <p>Alfarería Doña Ana</p>
           <p>2021</p>
-          <p class="descripcion">This project’s objective was to design a flowershop’s branding. The fictional shop I
-            created
-            was linked to my family
-            heritage.
-            As a homage to the women that came before me this branding was designed under concepts that identified them.
-            Empowered,
-            elegant, traditional but at the same time avant-garde women influenced by the Sonoran kitsch culture.
-            The name ROSA MÍSTICA comes from the rosary litany: Mystical rose, pray for us. Alluding to my religious
-            background and
-            its floral relation.</p>
+          <p class="descripcion">Alfarería Doña Ana is a ceramics online space where I show and sell my pieces. Space
+            devoted to local pottery craftwork, women’s artisan groups
+            and Mexican pop culture.</p>
+          <p class="descripcion">The brand is dedicated to making ceramic pieces that pimp up your space. Unique pieces
+            are worked in a workshop in Mexico City when it comes to larger collections, pieces are worked with a group
+            of local artisans.</p>
+
+          <p class="descripcion">Pieces can be bought directly on the Instagram account @alfareria_dona_ana</p>
 
         </div>
         <div class="fotos">
           <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466315/Portafolio%20Web/Rosa%20M%C3%ADstica/10_COMUNICACIO%CC%81N_EXTERIOR_qx7cak.jpg"
-            alt="RM1">
+            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652806272/Portafolio%20Web/Alfareria%20do%C3%B1a%20Ana/_DSC0367_lpxapk.jpg"
+            alt="ADA 1">
 
           <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466313/Portafolio%20Web/Rosa%20M%C3%ADstica/29_acabado_papel_qd3mqy.jpg"
-            alt="RM2">
-          <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466310/Portafolio%20Web/Rosa%20M%C3%ADstica/24_BOLSAS_nzpw7q.jpg"
-            alt="RM4"> <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466321/Portafolio%20Web/Rosa%20M%C3%ADstica/02_LOGOCOLGADOAFUERA_dlvie1.jpg"
-            alt="RM3">
-
-
+            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652806234/Portafolio%20Web/Alfareria%20do%C3%B1a%20Ana/Archivo_005_1_ysqwvs.jpg"
+            alt="ADA 2">
 
           <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466314/Portafolio%20Web/Rosa%20M%C3%ADstica/27_tarjetas_hucixp.png"
-            alt="RM 6">
-
+            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652806164/Portafolio%20Web/Alfareria%20do%C3%B1a%20Ana/heladeria_1_nylsmr.jpg"
+            alt="RM4">
           <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466314/Portafolio%20Web/Rosa%20M%C3%ADstica/20_VIDRIO_xbdbzg.jpg"
-            alt="RM 5">
-
-
+            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652805912/Portafolio%20Web/Alfareria%20do%C3%B1a%20Ana/presskit2_jatzu1.jpg"
+            alt="RM5">
+          <img
+            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652805962/Portafolio%20Web/Alfareria%20do%C3%B1a%20Ana/_DSC1095_zs7oim.jpg"
+            alt="ADA 3">
 
 
         </div>
       </div>
       <!-- FERMENTA-->
-      <div class="content">
+      <div class="content" id="fermenta">
         <div class="texto">
           <p>FERMENTA</p>
           <p>founded in 2021</p>
-          <p class="descripcion"> Fermenta is a self-managed student collective. Critical reflection experiences are designed to reflect around 
-          care, bodies and territories. Artists, poets, dancers and people across different practices and backgrounds are invited to deliver workshops with experimental and flexible methodologies. </p>
-          <p class="descripcion">Documentation of the first event in April 2022. Experimental Writing with Carla Faesler</p> <p class="descripcion">Photos by Aitana Fernandez</p>
-            
+          <p class="descripcion"> Fermenta is a self-managed student collective. Critical reflection experiences are
+            designed to reflect around
+            care, bodies and territories. Artists, poets, dancers and people across different practices and backgrounds
+            are invited to deliver workshops with experimental and flexible methodologies. </p>
+          <p class="descripcion">Documentation of the first event in April 2022. Experimental Writing with Carla Faesler
+          </p>
+          <p class="descripcion">Photos by Aitana Fernandez</p>
+
 
         </div>
         <div class="fotos">
           <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466315/Portafolio%20Web/Rosa%20M%C3%ADstica/10_COMUNICACIO%CC%81N_EXTERIOR_qx7cak.jpg"
-            alt="RM1">
+            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801795/Portafolio%20Web/Fermenta/IMG_0275_pk1ffh.jpg"
+            alt="FERMENTA 1">
 
           <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466313/Portafolio%20Web/Rosa%20M%C3%ADstica/29_acabado_papel_qd3mqy.jpg"
-            alt="RM2">
+            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801785/Portafolio%20Web/Fermenta/IMG_7147_iklyro.jpg"
+            alt="FERMENTA 3">
           <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466310/Portafolio%20Web/Rosa%20M%C3%ADstica/24_BOLSAS_nzpw7q.jpg"
-            alt="RM4"> <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466321/Portafolio%20Web/Rosa%20M%C3%ADstica/02_LOGOCOLGADOAFUERA_dlvie1.jpg"
-            alt="RM3">
-
-
-
+            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801785/Portafolio%20Web/Fermenta/IMG_7098_hcnysu.jpg"
+            alt="FERMENTA 2">
           <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466314/Portafolio%20Web/Rosa%20M%C3%ADstica/27_tarjetas_hucixp.png"
-            alt="RM 6">
+            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801783/Portafolio%20Web/Fermenta/IMG_7161_psmtrc.jpg"
+            alt="FERMENTA 4">
+          <img
+            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801794/Portafolio%20Web/Fermenta/IMG_0266_c7oznm.jpg"
+            alt="FERMENTA 5">
 
           <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652466314/Portafolio%20Web/Rosa%20M%C3%ADstica/20_VIDRIO_xbdbzg.jpg"
-            alt="RM 5">
+            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801782/Portafolio%20Web/Fermenta/IMG_7142_xagjcl.jpg"
+            alt="FERMENTA 6">
 
 
 
