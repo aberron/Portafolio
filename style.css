@@ -59,6 +59,7 @@ a {
 a:hover {
   text-decoration: underline;
   opacity: 80;
+  cursor:pointer;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -216,10 +217,11 @@ padding:1vw;
 
 .header{
   padding:1vw;
-
+  position: sticky;
+  top: 10px;
 }
 .projects{
-  margin-top: 40px;
+  /* margin-top: 40px; */
   padding:1vw;
   display: grid;
   grid-template-columns: 1fr 3.5fr;
@@ -230,10 +232,18 @@ padding:1vw;
   position: sticky;
   top: 60px;
 }
+.indice-burger {
+  padding-left: 20px;
+}
 
  .projects ul li:hover {
    text-decoration: underline;
  }
+
+/* .ficha {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+} */
 
 .content {
   top: 60px;
@@ -247,11 +257,66 @@ padding:1vw;
     top: 60px;
 }
 
+.burger{
+  display: none;
+}
+
+
+@media all and (max-width: 740px) {
+  .projects{
+    grid-template-columns: 1fr;
+  }
+  .content{
+    grid-template-columns: 1fr;
+  }
+  .content .texto {
+      position: inherit;
+      padding-left: 15px;
+    }
+  .indice{
+    position: inherit;
+    background-color: aqua;
+    display: none;
+  }
+  .burger{
+    display: inherit;
+    position: sticky;
+    top:50px;
+    background-color: #ffffff;
+  }
+}
 .descripcion {
   margin-top: 15px;
   padding-right: 20px;
-} 
+}
 .fotos img{
 margin-top: 15px;
 margin-left: 15px;
   }
+
+.body-projects{
+position: relative;
+}
+/*
+.body-projects .menu{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+  }
+
+  .body-projects .menu li:nth-child(1) {}
+
+  .body-projects .menu li:nth-child(2) {
+    justify-self: end;
+  }
+
+  .body-projects .menu li:nth-child(3) {
+    align-self: end;
+  }
+
+  .body-projects .menu li:nth-child(4) {
+    align-self: end;
+    justify-self: end;
+  } */
