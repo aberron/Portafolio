@@ -23,8 +23,8 @@
 
 @media all and (max-width: 840px) {
   .container {
-    padding-right: 15vw;
-    padding-left: 15vw;
+    padding-right: 10vw;
+    padding-left: 10vw;
   }
 }
 
