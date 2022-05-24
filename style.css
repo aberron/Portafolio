@@ -142,6 +142,8 @@ height:100vh;
   align-self: end;
   justify-self:end;
 }
+
+
 .home img {
   width: 40%;
   position: absolute;
@@ -233,13 +235,16 @@ padding:1vw;
   top: 60px;
 }
 .indice-burger {
-  padding-left: 20px;
+  padding-left: 10px;
+  padding-right: 20px;
 }
 
- .projects ul li:hover {
+.projects ul li:hover {
    text-decoration: underline;
  }
-
+.burger-mini{
+  width: 20px;
+}
 /* .ficha {
   scroll-behavior: smooth;
   overflow-y: scroll;
@@ -259,15 +264,17 @@ padding:1vw;
 
 .burger{
   display: none;
+  margin-left: 10px;
 }
 
-
+/* TAMAÑO MOVIL */
 @media all and (max-width: 740px) {
   .projects{
     grid-template-columns: 1fr;
   }
   .content{
     grid-template-columns: 1fr;
+    padding-top: 50px;
   }
   .content .texto {
       position: inherit;
@@ -275,15 +282,19 @@ padding:1vw;
     }
   .indice{
     position: inherit;
-    background-color: aqua;
     display: none;
   }
   .burger{
     display: inherit;
     position: sticky;
-    top:50px;
+    top:40px;
     background-color: #ffffff;
+    max-width: max-content;
   }
+  /* .menu li{
+    background-color: #ffffff;
+      max-width: max-content;
+  } */
 }
 .descripcion {
   margin-top: 15px;
@@ -297,26 +308,37 @@ margin-left: 15px;
 .body-projects{
 position: relative;
 }
-/*
-.body-projects .menu{
-    position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
 
-  }
-
-  .body-projects .menu li:nth-child(1) {}
-
-  .body-projects .menu li:nth-child(2) {
-    justify-self: end;
-  }
-
-  .body-projects .menu li:nth-child(3) {
-    align-self: end;
-  }
-
-  .body-projects .menu li:nth-child(4) {
-    align-self: end;
-    justify-self: end;
-  } */
+/* MENU PROJECTS */
+.menu  {
+      position: relative;
+    }
+  
+    .menu li {
+      position: fixed;
+    }
+  
+    .menu  li:nth-child(1) {
+      top: 10px;
+      left: 10px;
+    }
+  
+    .menu li:nth-child(2) {
+      justify-self: end;
+      top: 10px;
+      right: 10px;
+    }
+  
+    .menu li:nth-child(3) {
+      align-self: end;
+      bottom: 10px;
+      left: 10px;
+    }
+  
+    .menu li:nth-child(4) {
+      align-self: end;
+      justify-self: end;
+        bottom: 10px;
+        right: 10px;
+    }
+  
