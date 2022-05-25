@@ -1,3 +1,6 @@
+/* Imports - Tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
 #inital_box {
   /* /* width: 100vw; */
   height: 100vh;
@@ -7,6 +10,13 @@
   /* border: solid; */
 }
 
+.notas{
+  font-family: 'Syne Mono', monospace;
+  color:indianred;
+  text-align: right;
+  padding-left: 5vw;
+  font-size: 11pt;
+}
 @media all and (max-width: 1920px) {
   .container {
     padding-right: 25vw;
@@ -113,4 +123,3 @@ canvas{
   top: 40vh;
 
 }
- 
