@@ -128,9 +128,14 @@
             This project was a collaboration with Amanda Fernandez, designer and friend.</p>
         </div>
         <div class="fotos">
-          <img
-            src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652192855/Portafolio%20Web/Ambulante/triple_poster_cineteca_n4ho54.jpg"
-            alt="Ambulante 01">
+          <div x-data="{ open: false }">
+            <a x-on:click="open = !open" @click.away="open = false">
+              <img
+                src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652192855/Portafolio%20Web/Ambulante/triple_poster_cineteca_n4ho54.jpg"
+                alt="Ambulante 01">
+              <div class="fotogrande" x-show="open">hola</div>
+            </a>
+          </div>
           <img
             src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652193052/Portafolio%20Web/Ambulante/Screen_Shot_2022-05-10_at_9.30.35_e9a0sb.png"
             alt="Page Design">
@@ -547,6 +552,60 @@
     </div>
 
   </div>
+<style>
+  .mySlides {
+    display: none;
+  }
+</style>
+
+<!-- INTENTO SLIDESOW -->
+  <style>
+    .mySlides {
+      /* display: none; */
+    }
+  </style>
+
+  <h2 class="slideshow">Manual Slideshow</h2>
+  <div class="slidwshowbox">
+    <img class="mySlides" src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801795/Portafolio%20Web/Fermenta/IMG_0275_pk1ffh.jpg" style="width:100%">
+
+    <img class="mySlides" src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801785/Portafolio%20Web/Fermenta/IMG_7147_iklyro.jpg" style="width:100%">
+
+    <img class="mySlides" src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801785/Portafolio%20Web/Fermenta/IMG_7098_hcnysu.jpg" style="width:100%">
+
+    <img class="mySlides" src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801783/Portafolio%20Web/Fermenta/IMG_7161_psmtrc.jpg" style="width:100%">
+
+    <img class="mySlides"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801794/Portafolio%20Web/Fermenta/IMG_0266_c7oznm.jpg"
+      style="width:100%">
+
+    <img class="mySlides"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801782/Portafolio%20Web/Fermenta/IMG_7142_xagjcl.jpg"
+      style="width:100%">
+
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
 
 </body>
 
