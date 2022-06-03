@@ -275,6 +275,12 @@ padding:1vw;
   margin-left: 10px;
 }
 
+.fotogrande{
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+}
 /* TAMAÑO MOVIL */
 @media all and (max-width: 740px) {
   .projects{
