@@ -22,10 +22,10 @@
     </li>
     <!-- <li>Contact</li> -->
     <li>
-      <a href="#contact">Contact</a>
+      <a href="./index.html#contact">Contact</a>
     </li>
     <li>
-      <a href="#about">About</a>
+      <a href="./index.html#about">About</a>
     </li>
   </ul>
 
@@ -552,9 +552,76 @@
     </div>
 
   </div>
+  
 
+  <!-- INTENTO SLIDESOW -->
+ 
+  
 
+  <div class="slideshowbox">
+   
+    <img class="mySlides"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801795/Portafolio%20Web/Fermenta/IMG_0275_pk1ffh.jpg"
+      >
+
+    <img class="mySlides"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801785/Portafolio%20Web/Fermenta/IMG_7147_iklyro.jpg"
+      >
+
+    <img class="mySlides"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801785/Portafolio%20Web/Fermenta/IMG_7098_hcnysu.jpg"
+      >
+
+    <img class="mySlides"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801783/Portafolio%20Web/Fermenta/IMG_7161_psmtrc.jpg"
+      >
+
+    <img class="mySlides"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801794/Portafolio%20Web/Fermenta/IMG_0266_c7oznm.jpg"
+      >
+
+    <img class="mySlides"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1652801782/Portafolio%20Web/Fermenta/IMG_7142_xagjcl.jpg"
+      >
+
+    <button class="buttonleft" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="buttonright" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
   </script>
+
+<!-- TACHE -->
+<!-- <div x-data="{ open: false }" class="tache">
+  <div class="buton-tache" x-on:click="open = !open" @click.away="open = false">
+    <img class="tache-mini" src="tache.svg" alt="tache">
+  </div>
+  <span x-show="open">
+  </span>
+</div> -->
+
+<button class="boton" onclick="window.history.back()"><svg class="tache" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#ff4" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
+  </svg>
+</button>
 
 </body>
 
