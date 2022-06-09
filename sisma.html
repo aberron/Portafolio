@@ -1,170 +1,530 @@
-/* Imports - Tipografía */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');
+<!DOCTYPE html>
+<html>
 
-#inital_box {
-  /* /* width: 100vw; */
-  height: 100vh;
-  /* border: solid; */
-}
-#inital_box img {
-  /* /* width: 100vw; */
-  /* height: 100vh; */
-  width: 100vw;
-  object-fit: cover;
-  /* border: solid; */
-}
+<head>
+  <title>SISMA</title>
+  <link rel="stylesheet" href="style-sisma.css">
+  <script src="alarm.js" defer></script>
+</head>
 
-.container {
-  /* background-color: rgb(70, 150, 150); */
-  width: 100vw;;
-}
+<body>
+  <audio id="myAudio">
+    <source src="https://res.cloudinary.com/dyk5cl3d8/video/upload/v1652975048/SISMA/sismalert30_thmbxq.mp3">
+    Your browser does not support the audio element.
+  </audio>
 
-@media all and (min-width: 600px) {
-  .container {
-    width: 70vw;
-    margin-left: 20px;
-  }
-  .cita{
-    margin-top: 10vw;
-  }
-}
 
- .portada {
-   background-image: url("https://res.cloudinary.com/dyk5cl3d8/image/upload/v1653583223/SISMA/costureras/COSTURERAS_06_ocjqsy.jpg");
-   background-size: cover;
-   background-position: center center;
-   height: 100vh;
-   width: 100vw;
-   position: relative;
+  <div class="portada">
+    <!-- <img
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1653583223/SISMA/costureras/COSTURERAS_06_ocjqsy.jpg"
+      alt="portada"> -->
+    <h1>SISMA</h1>
+  </div>
 
- }
 
- .portada h1 {
-   position: absolute;
-   bottom: -1.4ch;
-   font-size: 25vw;
- }
 
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  <p id="clock">00:00:00</p>
 
-  letter-spacing: -5px;
-  line-height: 1vh;
-}
-h3 {
-  font-family: Arial, Helvetica, sans-serif;
-    font-size: 100px;
-    letter-spacing: -5px;
-    line-height: 105px;
-    text-transform: uppercase;
-    text-align: left;
-}
-p {
-  font-family: Arial;
-  font-size: 20px;
-  line-height: 24px;
-}
-.notas {
-  font-family: Arial, Helvetica, sans-serif;
-  /* text-align: right; */
-  /* padding-left: 15vw; */
-  padding: 10px;
-  font-size: 20px;
-  line-height: 24px;
-  color: blue;
-  /* background-color: blue; */
-  /* font-family: 'IBM Plex Mono', monospace; */
+  <p class="cita">“¡Alerta!, alerta: que tiemblen los machistas, que America Latina será toda feminista”</p>
+  <div class="container">
 
-}
-h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 35px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.colofon{
-  font-size: 18px;
-  line-height: 20px;
-}
-#clock {
-  padding: 10px;
-  position: sticky;
-  top: 10px;
-  text-align: end;
-  border: solid;
-  border-width: 4px;
-  max-width: max-content;
-  margin-left: auto;
-  background-color: white;
-}
 
-#inital_box .textbox {
-  text-align: left;
-  padding-left: 30px;
-}
+    <p>Con la intención de visibilizar la poca respuesta del gobierno ante la violencia de género, se usa el fenómeno
+      social del <b>sismo</b> como contraposición.</p>
+    <p>La investigación se sitúa en México porque geograficamente tiene un alto movimiento telúrico y a la par, un
+      alarmante índice de violencia contra las mujeres.</p>
 
-.initial_image {
-  /* justify-content: space-around;  */
-  /* object-fit: cover; */
-  max-width: 100%;
-}
-.content_image {
-  max-width: 100%;
-}
+    <p>Los sismos de 1985 y 2017 han tenido consecuencias sociales y políticas importantes. Ante la crisis, lxs
+      desaparecidxs, la incertidumbre; la sociedad se alerta, responde y actúa activamente. Entonces, la memoria
+      colectiva se construye y permea en levantamientos sociales autogestivos—algunos más efímeros que otros—.</p>
 
-.cita {
-  /* text-align: right; */
+    <p>Debido a la historia y los sistemas que implementa Protección Civil, lxs ciudadanxs desde la infancia, están
+      entrenadxs a reaccionar asertivamente ante un temblor. Se tienen normalizados los protocolos de cuidados, los
+      simulacros y existe toda una señalética en el territorio sobre qué hacer y qué evitar. Sin embargo, la realidad
+      de
+      las mujeres no parece ser igual de relevante y alarmante para que se desarrollen estructuras de protección
+      similares.</p>
 
-  border-top: solid;
-  padding-top: 10px;
-  border-bottom: solid;
-  border-width: 4px;
-  padding-bottom: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding-left: 2vw;
-  font-size: 40px;
-  line-height: 43px;;
-}
+    <p>En este ejercicio en construcción se explora, se cruza, se mapea y compara de manera multidisciplinar esta
+      confrontación.
+      Experimentalmente, se recaudaron testimonios de redes sociales,
+      se intervino señalética, se diseñó sonido y se recopiló un archivo multimedial. Esta página web lo presenta,
+      incluye instancias que parten de la reflexión personal y anexa información, videos, imágenes y enlaces de otras fuentes relevantes.</p>
 
-body {
-  /* background-image:
-      url("https://res.cloudinary.com/dyk5cl3d8/image/upload/v1653404000/SISMA/sismografo-01_x3146x.png");
-    background-position: center;
-    /* background-repeat: no-repeat; */
-    /* background-attachment: fixed; */ */
+    <p class="notas">// Este documento/archivo esta en constante movimiento/edición y crecimiento. Con este color se indica mi tren de pensamiento, mis notas </p>
 
-}
+    <!-- DEFINICIÓN SISMA -->
+    <h2>Definición SISMA</h2>
+    <p>Cisma con "c" equivale a ruptura a división. Se produce en el seno de una organización o de un movimiento
+      cultural, cuando algunos de los individuos que forman parte de ella se revelan porque no están de acuerdo con la
+      ideología o doctrina dominante.</p>
+    <p>SISMA con "s" incluye una nueva concepción del sismo. Conserva el significado de cisma, pero lo transforma a femenino, relativo al quiebre con el sistema y estructuras imperantes, y al surgimiento del nuevo paradigma donde
+      se redefina y resignifique al sujeto.</p>
+    <p> <b>Hay que convocar la SISMA orientada al quiebre del aparato actual existente para definir al sujeto y asi redefinir a la mujer.</b> </p>
 
-.testimonio {
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-bottom: 20px;
-  border-right: solid;
-  border-left: solid;
-  padding-left: 20px;
-  padding-right: 15px;
-  border-width: 4px;
-}
+    <p class="notas">// Bienvenide al movimiento, hagámoslo temblar, #sevaacaer</p>
 
-.mujer {
-  font-weight: bold;
-}
 
-.twitter-tweet {
-  margin: auto;
+    <!-- TESTIMONIOS -->
+    <h2>Testimonios de Violencia de Género</h2>
+    <p>Escavación de relatos y memoria colectiva. Este ejercicio compila testimonios de los sismos. Mediante una reconfiguración del lenguaje se recontextualizan en una logica de confrontación.</p>
+    <div class="testimonio">
+      <a href=""></a>
+      <p><b><a href="https://twitter.com/Betty_Couder/status/1174737786701791233?ref_src=twsrc%5Etfw">Betty Couder
+            @Betty_Couder en twitter (2019)</a>.</b> </p>
 
-}
+      <p>Hace dos años corri por mi vida, fortuna la mía de estar contando lo sucedido, lamento en el alma que no
+        muchas
+        corran con la misma suerte</p>
+      <p>Que en Paz Descansen, hermanas</p>
+    </div>
+    <p class="notas">// 24/05/2022: Abusaron de María José mi amiga este fin de semana, me pegó mucho. No pude sentir
+      otra
+      cosa que impotencia, me recordó a mi último abuso en Oaxaca, está fatal, está muy grave. </p>
+    <div class="testimonio">
+      <p class="mujer">Misaki Arai @michacky_arai en Instagram (2022)</p>
+      <p>Traducido del inglés</p>
+      <p>Estoy horrorizada, Dios mío, mis piernas temblaban tratando de encontrar una ruta de escape en un hotel. Bajé
+        15 pisos como si fuera mi última oportunidad de vida. Solo tenía mi teléfono y la llave de la habitación.
+        Estaba en pijama, sin máscara mientras todos vestían ropa adecuada y máscaras. </p>
+      <p>Ya se fue, bueno, eso espero</p>
+    </div>
+    <p class="notas">// Este testimonio yo lo vi en mis stories, es de una amiga japonesa, en cuanto lo leí y tan
+      cerca
+      del 8M no pude no pensar en la relación. Me voló la cabeza</p>
 
-/* canvas{
-  background-color: aqua;
-  width: 100vw;
-  height: 10vh;
-  position: sticky;
-  top: 40vh;
-} */
+    <div class="testimonio">
+      <p><b><a href="https://elpais.com/internacional/2017/09/20/mexico/1505938120_628601.html">Cecilia Ballesteros en
+            El País (2017)</a>.</b> </p>
 
-.letritas {
-  font-size: 12px;
-  line-height: 12px;
-}
+      <p>A las 3.14 de la mañana del martes 19 de septiembre estaba en mi departamento, en un sexto piso, en la
+        colonia
+        Condesa. He vivido otros abusos, pero ninguno como este. De repente, de pronto, de
+        golpe, sin sentir ningún tipo de alarma, mi cuerpo empezó a temblar, a moverse, a trepidar, a oscilar, a todo
+        lo
+        que uno
+        se pueda imaginar, al tiempo que veía cómo mis lentes, mi blusa, mi pantalón, mis joyas, toda mi vida se
+        desbarataba, se desmoronaba ante mis ojos. Él se desprendió y saltó disparado, impactó en el centro de mi
+        cuerpo. Era como vivir una escena
+        del infierno. Tuve suerte de no estar borracha, viviendo en un ático, en una zona peligrosa como CDMX, dos de
+        las peores
+        condiciones para afrontar una violación, según todos los parámetros. Mi consiencia como si fuera una maestra
+        de
+        yoga y como si hubiera vivido el trágico infierno, me iba dando instrucciones. "Tranquila, tranquila. Ya está
+        pasando. Cuidado, no acabó. Ahora viene lo peor".
+        Desde mi posición, veía como su cuerpo oscilaba como si fuera junco y el suelo se movía como una batidora bajo
+        mis pies, en círculos y de un lado a otro. No hubo ruidos, como se escuchan otras veces. No pude pensar en
+        otra
+        cosa ni en nadie, salvo que de esta no salía, mezclado con un sentimiento de absoluta impotencia y de
+        conciencia
+        de la fragilidad de mi vida como mujer, es solo cuestión de serlo o más bien del patriarcado, de haber crecido
+        en el sistema equivocado.
+        Calculo que aquello duró más de un minuto, que se hizo eterno. "Este viene más duro que el último", murmuraba
+        mi
+        consiencia. "Diosito, ¿estoy viva?" </p>
+      <p></p>
+    </div>
+
+    <p>Fuente: testimonios de medios y redes sociales a raiz de temblores reinterpretados con palabras y conceptos de
+      violencia
+      de genero </p>
+
+    <!-- <blockquote class="twitter-tweet">
+      <p lang="es" dir="ltr">Hace dos años corrimos por nuestras vidas, fortuna la mía de estar contando lo sucedido,
+        lamento en el alma que muchos no corrieran con la misma suerte. 😔😭🇲🇽💔<br><br>Que en Paz Descansen,
+        hermanos.
+        ❤️<a href="https://twitter.com/hashtag/19septiembre2017?src=hash&amp;ref_src=twsrc%5Etfw">#19septiembre2017</a>.
+      </p>
+      &mdash; Betty Couder🍯👩🏻‍🔬 (@Betty_Couder) <a
+        href="https://twitter.com/Betty_Couder/status/1174737786701791233?ref_src=twsrc%5Etfw">September 19, 2019</a>
+    </blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <embed src="https://elpais.com/internacional/2017/09/20/mexico/1505938120_628601.html"
+      style="width:500px; height: 500px;"> -->
+
+    <!-- SEÑALETICA SISMA -->
+    <h2>Intersección</h2>
+
+    <p> En este contexto —en el ir y venir entre el sufrimiento por violencia de género y el sufrimiento ante un
+      desastre natural— recuerdo cómo la violencia patriarcal nunca es exenta. Siempre se atraviesa y en el caso de
+      ser
+      una víctima de un sismo, eres más vulnerable siendo mujer. NO NOS AFECTAN IGUAL. En estados de crisis
+      colectivas,
+      el Estado no ve por la situación de las mujeres, cuerpos menstruantes, embarazadas, etc. La inseguridad se
+      potencializa. <b>Entre los escombros, a las mujeres nos violan. En la ciudad a oscuras, a las mujeres nos
+        violan,
+        entre las muertas, a las mujeres nos violan.</b> LAS MUJERES CORREMOS MÁS RIESGOS </p>
+
+
+    <p>Anexo enlaces a lecturas que abordan estos temas:</p>
+    <p><a
+        href="https://www.csmonitor.com/World/Americas/2019/0926/How-attacks-on-women-mobilized-Mexico-s-feminist-earthquake">
+        How attacks on women mobilized Mexico’s ‘feminist earthquake’</a>
+      <br> By Sara Miller Llana
+    </p>
+    <p><a
+        href="https://sci-hub.se/https://www.jstor.org/stable/10.15767/feministstudies.41.3.682#metadata_info_tab_contents">
+        Gendered Impacts of the Earthquake and Responses in Nepal</a>
+      <br> Author(s): Claire Willey Sthapit
+      Source: Feminist Studies, Vol. 41, No. 3, Gendering Bodies, Institutional Hegemonies (2015), pp. 682-688
+      Published
+      by: Feminist Studies, Inc
+    </p>
+    <p><a href="https://vc.bridgew.edu/cgi/viewcontent.cgi?article=1790&context=jiws">
+        Ecofeminism and Nature feminism and Natural Disasters: Sri Lankan W al Disasters: Sri Lankan Women
+        PostTsunami</a>
+      <br> Alyssa Banford & Cameron Kiely Froude
+    </p>
+    <p><a href="https://drive.google.com/file/d/1D5QjT5DtoXdgrUN279iV8S8GujlShV-h/view?usp=sharing">
+        “Pa Manyen Fanm Nan Konsa”:
+        Intersectionality, Structural
+        Violence, and Vulnerability
+        Before and After Haiti’s Earthquake</a>
+      <br> Mark Schuller
+    </p>
+
+    <p><a href="https://scholarship.law.umassd.edu/cgi/viewcontent.cgi?article=1239&context=fac_pubs">
+        Feminist Perspectives on Disaster, Pandemics, and Intimate
+        Partner Violence</a>
+      <br> Margaret Drew
+      University of Massachusetts School of Law - Dartmouth, mdrew1@umassd.edu
+    </p>
+
+    <p><a href="https://sci-hub.se/10.1080/0966369x.2017.1407297">
+        Challenging the masculinist framing of disaster research</a>
+      <br> Gail Adams-Hutcheson
+      Geography, University of Waikato, Hamilton, New Zealand
+    </p>
+
+
+    <!-- SEÑALETICA SISMA -->
+    <h2>Señaletica SISMA</h2>
+    <img class=content_image
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1654181530/SISMA/se%C3%B1aletica%202/_DSC0067_ueswxj.jpg"
+      alt="salidadelaemergencia">
+    <p>Esta serie de señalética se presenta como una contrapropuesta a la señaletica oficial impuesta en el territorio
+      por Protección Civil. Cambiando algunos elementos como el color, el género y algunas palabras o letras, cobran
+      un
+      sentido completamente distinto y fuerte. Nos invita a reflexionar sobre las ideas centrales de SISMA.
+    </p>
+    <img class=content_image
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1654180849/SISMA/se%C3%B1aletica%202/_DSC0060_rmwu1z.jpg"
+      alt="salidadelaemergencia">
+    <p class="notas">// Esta pieza sugiere un SISMA: una forma de pensar y actuar que nos sacará de este crisis. </p>
+    <img class=content_image
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1654181005/SISMA/se%C3%B1aletica%202/_DSC0056_rmw8ek.jpg"
+      alt="rutaderesistencia">
+    <img class=content_image
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1654180848/SISMA/se%C3%B1aletica%202/_DSC0052_ot7gcx.jpg"
+      alt="zona de mayor riesgo">
+    <p class="notas"> // Que fuerte que las mujeres esten en peligro en sus propias casas. Violencia doméstica - zona
+      de
+      mayor riesgo </p>
+    <img class=content_image
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1654180848/SISMA/se%C3%B1aletica%202/_DSC0057_dsboqm.jpg"
+      alt="punto de reflexión">
+    <img class=content_image
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1654180848/SISMA/se%C3%B1aletica%202/_DSC0061_jisqya.jpg"
+      alt="salida de la emergencia 02">
+
+
+    <!-- MAPA -->
+    <h2>Mapa</h2>
+    <p class="notas">// Territorio. En México tiembla muy seguido,y la violencia de género nos afecta, diario, a muchas y en intensidades devastadoras. ¿Dónde suceden estos desastres? ¿Hay alguna relación? ¿Qué pasa en Acapulco?, por ejemplo. </p>
+    <p>Alerta de Violencia de Género contra las Mujeres
+    </p>
+    <p><b>¿Qué es la alerta de violencia de género contra las mujeres?</b>
+    <p><a
+        href="https://www.gob.mx/inmujeres/acciones-y-programas/alerta-de-violencia-de-genero-contra-las-mujeres-80739#:~:text=La%20alerta%20de%20violencia%20de%20g%C3%A9nero%20contra%20las%20mujeres%20(AVGM,el%20Reglamento%20de%20dicha%20Ley.">Articulo
+        sobre AVGM www. gob.mx</a> </p>
+
+    <p>Alerta de violencia de género contra las mujeres (AVGM) es un mecanismo de protección de los derechos humanos
+      de
+      las mujeres único en el mundo, establecido en la Ley General de Acceso de las Mujeres a una Vida Libre de
+      Violencia y su trámite para emitirla o concederla lo describe el Reglamento de dicha Ley.</p>
+    <p>Consiste en un conjunto de acciones gubernamentales de emergencia para enfrentar y erradicar la violencia
+      feminicida y/o la existencia de un agravio comparado que impida el ejercicio pleno de los derechos humanos de
+      las
+      mujeres, en un territorio determinado (municipio o entidad federativa); la violencia contra las mujeres la
+      pueden
+      ejercer los individuos o la propia comunidad. (Artículo 22 de la Ley de Acceso).</p>
+
+    <p>¿Cuál es el objetivo fundamental de la alerta de violencia de género contra las mujeres?</p>
+    <p>Garantizar la seguridad de mujeres y niñas, el cese de la violencia en su contra y/o eliminar las desigualdades
+      producidas por una legislación o política pública que agravia sus derechos humanos. (Artículo 23 de la Ley de
+      Acceso).</p>
+
+
+    <p>¿Qué es la violencia feminicida?</p>
+    <p>Es la forma extrema de violencia contra las mujeres por el solo hecho de ser mujeres, ocasionada por la
+      violación
+      de sus derechos humanos, en los espacios público y privado; está integrada por las conductas de odio o rechazo
+      hacia las mujeres, que pueden no ser sancionadas por la sociedad o por la autoridad encargada de hacerlo y puede
+      terminar en homicidio y otras formas de muerte violenta de mujeres. (Artículo 21 de la Ley de Acceso).</p>
+
+    <p>¿Cuándo se presenta un agravio comparado?
+      Cuando un ordenamiento jurídico vigente o una política pública contengan alguno de los siguientes supuestos y
+      éstos transgredan los Derechos Humanos de las Mujeres:</p>
+    <p>Distinciones, restricciones o derechos específicos diversos para una misma problemática o delito, en detrimento
+      de las mujeres de esa entidad federativa o municipio; No se proporcione el mismo trato jurídico en igualdad de
+      circunstancias, generando una discriminación y consecuente agravio, o se genere una aplicación desigual de la
+      ley,
+      lesionándose los Derechos Humanos de las Mujeres, así como los principios de igualdad y no discriminación.</p>
+
+    <p>¿Cuántas Alertas de Violencia de Género contra las Mujeres se han declarado?</p>
+    <p>A la fecha se han declarado 25 AVGM en 22 entidades del país que incluyen 643 municipios.</p>
+
+    <p>De las 25 declaratorias emitidas desde 2015 hasta la fecha se han acumulado 552 medidas recomendadas a
+      gobiernos
+      y
+      órganos autónomos locales, para que las implementen en el territorio y coadyuvar a reducir la violencia
+      feminicida.</p>
+    <p>De estas 552 medidas, 208 son de prevención; 190 son para lograr justicia y reparación del daño a los
+      familiares,
+      víctimas y sobrevivientes de la violencia feminicida, y 154 corresponden a medidas de seguridad.</p>
+
+    <p class=" notas">// ¿Por qué en ninguna escuela enseñan alguna de las 552 medidas se plantean de prevencion? la
+      esucación es un gran primer paso. Pero temblores, aunque sea mucho menos probable, todo sabemos cómo reaccionar.
+    </p>
+
+    <p>Entidades con AVGM</p>
+
+      <p class="letritas"> <b>Estado de México:</b> Se declaró el 31 de julio de 2015 en 11 municipios: Ecatepec de Morelos,
+        Nezahualcóyotl, Tlalnepantla de Baz, Toluca de Lerdo, Chalco, Chimalhuacán, Naucalpan de Juárez, Tultitlán,
+        Ixtapaluca, Valle de Chalco y Cuautitlán
+        Izcallí. Morelos:</b>Se declaró el 10 de agosto de 2015 para ocho municipios: Cuautla, Cuernavaca, Emiliano Zapata,
+        Jiutepec, Puente
+        de Ixtla, Temixco, Xochitepec y Yautepec.<b>Michoacán:</b>Se declaró el 27 de junio de 2016 para 14 municipios: Morelia, Uruapan, Lázaro Cárdenas,
+        Zamora, Apatzingán,
+        Zitácuaro, Los Reyes, Pátzcuaro, Tacámbaro, Hidalgo, Huétamo, La Piedad, Sahuayo y Maravatío.<b>Chiapas:</b>Se declaró el 18 de noviembre 2016 en 7 municipios del estado: Comitán de Domínguez, Chiapa de
+        Corzo, San Cristóbal de las Casas, Tapachula, Tonalá, Tuxtla Gutiérrez y Villaflores. Asimismo, requiere
+        acciones
+        específicas para la región de los Altos de Chiapas, la cual incluye los municipios de Aldama, Amatenango del
+        Valle, Chalchihuitán, Chamula, Shanal,
+        Chenalhó, Huiztán, Larráinzar, Mitontic, Oxchuc, Pantelhó, San Cristóbal de las Casas, San Juan Cancuc, Santiago
+        El Pinar, Tenejapa, Teopisca y Zinacantán. <b>Nuevo León:</b> Se declaró el 18 de noviembre 2016 en 5 municipios del estado: Apodaca, Cadereyta Jiménez,
+        Guadalupe, Juárez y
+        Monterrey.
+      <b>Veracruz VF: </b>Se declaró el 23 de noviembre de 2016 en 11 municipios: Boca del Río, Coatzacoalcos,
+        Córdoba,
+        Las Choapas,
+        Martínez de la Torre, Minatitlán, Orizaba, Poza Rica de Hidalgo, Tuxpan, Veracruz y Xalapa.
+        Sinaloa: Se declaró el 31 de marzo de 2017 en 5 municipios: Ahome, Culiacán, Guasave, Mazatlán y Navolato.<b>Colima:</b>Se declaró el 20 de junio de 2017 en 5 municipios: Colima, Coquimatlán, Cuauhtémoc, Tecomán y
+        Villa
+        de Álvarez.<b>San Luis Potosí:</b>Se declaró el 21 de junio de 2017 en 6 municipios: Ciudad Valles, Matehuala, San Luis
+        Potosí, Soledad
+        de Graciano Sánchez, Tamazunchale y Tamuín.<b>Guerrero:</b> Se declaró el 22 de junio de 2017 en 8 municipios: Acapulco de Juárez, Ayutla de los Libres,
+        Chilpancingo de los Bravo, Coyuca de Catalán, Iguala de la Independencia, José Azueta, Ometepec y Tlapa de
+        Comonfort.<b>Quintana Roo:</b> Se declaró el 7 de julio de 2017 en tres municipios: Benito Juárez, Cozumel y Solidaridad.
+        Asimismo, requiere acciones específicas para el municipio de Lázaro Cárdenas, municipio de población indígena.<b>Nayarit:</b> Se declaró el 4 de agosto de 2017 en siete municipios: Acaponeta, Bahía de Banderas, Del Nayar,
+        Ixtlán del Río, Santiago Ixcuintla, Tecuala y Tepic. Asimismo, establece acciones específicas para los
+        municipios
+        con predominante población indígena: Del Nayar, La Yesca y Huajicori.<b>Veracruz AC: </b>Se declaró el 13 de diciembre de 2017 por agravio comparado a los poderes Legislativo,
+        Ejecutivo y Judicial.
+        <b>Oaxaca: </b>29 de agosto de 2018
+        <b>Zacatecas:</b> Declaratoria el 7 de agosto de 2018.
+      <b>Durango: </b>5 de noviembre de 2018.
+      <b>Campeche: </b>16 de noviembre de 2018.
+      <b>Jalisco: </b>20 de noviembre de 2018.
+      <b>Puebla: </b>8 de abril de 2019.
+      <b>Estado de México</b>20 de septiembre de 2019.
+      <b>Guerrero AC:</b>5 de junio de 2020.<b> Baja California: </b>25 de junio de 2021.
+      A la fecha se han evaluado a 18 de 22 estados con alerta. Los resultados arrojan que 9% de las medidas
+        recomendadas han
+        sido cumplidas a cabalidad; 5% no han sido cumplidas, y 86% se encuentran en proceso de cumplimiento o
+        parcialmente
+        cumplidas.¿Se ha decidido no declarar alguna Alerta de Violencia de Género contra las Mujeres?
+        En 10 ocasiones se ha determinado no declarar la AVGM debido a que se ha concluido que se actualizan elementos
+        objetivos suficientes para declarar procedente la alerta de violencia de género contra las mujeres:<b>Guanajuato: </b>el 30 de junio de 2015 se notificó la no procedencia de la AVGM.
+      <b>Baja California: </b>el 19 de mayo de 2016, se notificó la no procedencia de la AVGM.
+      <b>Querétaro: </b>el 9 de febrero de 2017 se notificó la no procedencia de la AVGM.
+      <b>Puebla: </b>el 7 de julio de 2017, se notificó la no procedencia de la AVGM.
+      <b>Cajeme, Sonora: </b>el 4 de agosto de 2017 se notificó la no procedencia de la AVGM.
+      <b>Tabasco: </b>el 4 de agosto de 2017 se notificó la no procedencia de la AVGM.
+      <b>Tlaxcala: </b>el 4 de agosto de 2017 se notificó la no procedencia de la AVGM.
+      <b>Yucatán: </b>9 de agosto de 2018.
+      <b>Coahuila: </b> 29 de noviembre de 2018.
+      <b>Ciudad de México: </b>7 de junio de 2019.
+      ¿Cuántas solicitudes de Alertas de Violencia de Género contra las Mujeres están vigentes?
+        Al día de hoy, hay cinco procedimientos en trámite: Ciudad de México, Chihuahua, Sonora VF, Sonora AC y Veracruz
+        VF2.
+      ¿Cuántas solicitudes de Alertas de Violencia de Género contra las Mujeres hay en amparo?
+        Zacatecas.
+        Veracruz VF
+        Ciudad de México
+        Alerta de Violencia de Género contra las Mujeres (AVGM)
+        Conoce más de este mecanismo para la protección de los derechos de las mujeres en México y la erradicación de la
+        violencia en su contra.</p>
+
+
+    <!-- COSTIRERAS -->
+    <h2>Un monumento al machismo y a la corrupción</h2>
+    <p><a
+        href="https://www.telesurtv.net/news/Costureras-del-85-una-historia-de-lucha-tras-el-terremoto-en-Mexico-20170920-0064.html">Costureras
+        del 85, una historia de lucha tras sismo en México</a> </p>
+    <p>En 1985, tras el temblor del 19 de septiembre, muchas fabricas donde trabajaban costureras se
+      convirtieron en escombros.</p>
+    
+    <p>El terremoto evidenció las condiciones en las que trabajaban las obreras del vestido, lo que las obligó a adelantar
+      la
+      conformación del Sindicato de Costureras que llevaría por nombre la fecha de la tragedia; nació así el primer
+      movimiento
+      laboral en México dirigido por mujeres. </p>
+    
+    <p> Las condiciones laborales de estas trabajadoras eran indignas. Muchas murieron porque para evitar robos, <b>los
+        jefes cerraban la puerta con llave y no pudieron escapar.</b> Muchos edificios
+      que albergaban talleres cayeron al no estar preparados para soportar el peso de la maquinaria de costura y, sobre
+      todo,
+      de los enormes rollos de tela.</p>
+    
+    <p><b>EN 2017 SE VOLVIÓ A REPETIR LA HISTORIA</b></p>
+    <div class="testimonio">
+      <p>Bolívar y Chimalpopoca - Costureras</p>
+      <p>Era una maquila de indocumentadas. El rumor dice que al día dos metieron maquinaria pesada. Con
+        sobrevivientes
+        adentro.</p>
+      <p>** investigar bien la historia</p>
+      <p>El terreno está limpio. Hay coronas, cruces y demás. Gente rezando. No parece haber familias aquí, no tenían
+        familia.Eran indocumentadas. La gente que está aquí parece estar cuestionando la manera de resolver el tema.
+      </p>
+      <p> Hay banda
+        grafiteando mensajes en contra de la corrupción y el machismo.</p>
+      <p>Me llegaron a ofrecer comida. No los Gatorade y pasta de la Condesa. Acá son naranjas en costal y pan en
+        bolsa.
+      </p>
+      <p>Hay una pared o cacho de losa, no se, que está semirecargado. La banda lo grafitea con mensaje.</p>
+      <p>La dimensión del objeto,
+        dentro de un espacio donde pasó lo que pasó, lo convierte en un monumento. Es un memorial al machismo y
+        corrupción.</p>
+      <p><b>'El escombro es el gobierno, a derrumbarlo' </b>eso dice </p>
+      <p>Tienen una especie de altar, hecho de telas. De todos tipos. Hay ropa, bolsas, brassieres, etc. Hay flores y
+        velas.</p>
+      <p>Cuando lo estaba viendo se acercó una mujer a decir que porfavor los hombres atrás.</p>
+      <p>Hay tacos de canasta</p>
+      <p>El espacio esta muy sugerente para hacer un monumento o un espacio que cuente la historia de lo que pasó.</p>
+      <p>Hay una chava con una jarana cantando.</p>
+      <p>Me metí en la platica de una doña. Se ve conocía a alguna o que es del barrio. Dice que el dueño del predio
+        es
+        dueño del
+        de la cuadra y más. El edifico ya había sido muy dañado en el 85. Tenía 7 pisos y lo bajaron a 4.</p>
+      <p>Luego este guey construyó otro. La doña dice que el dueño corrió al edifico de su oficina (está enfrente)
+        solo
+        porque estaba su familia.</p>
+      <p>Dice la doña que el guey dijo que fue culpa de las victimas por quedarse en el estacionamiento y no salir.
+      </p>
+      <p>Lo limpiaron así porque la gente de adentro no tenía familia para impedir el acto. Lo limpiaron así por hijos
+        de puta.</p>
+      <p>Comiendo me topé a XX. El guey estuvo muy involucrado en los rescates porque su cuñado vende unas máquinas
+        para
+        cortar
+        varilla. Unas muy perras. Me dijo que estuvo en el Chimalpopoca, que sacaron a 3 chicas abrazadas. Le pregunté
+        si se
+        lograba distinguir alguna nacionalidad. Me dijo que no porque estaban blancas por el polvo. Le dijo que no
+        lograron
+        salir porque la salida era de checar dedo.</p>
+      <p>Eso está muy muy jodido. Esclavitud. Trata de personas.</p>
+      <p>**para los medios Álvaro Obregón ha sido la estrella. Por qué? Porque no Chimalpopoca? Esta sí es una
+        historia.
+      </p>
+    </div>
+    <p>Septiembre 2017 <br> Ideas de un Ciudadano. Testigo</p>
+
+    <p class="notas">// Me recomendaron clavarme en la historia de las costuras, nunca me imagine una tragedia como
+      esta.
+      No puede ser mejor ejemplo de esta contraposición. Ser mujer te hace más vulnerable. Ser explotada te hace más
+      vulnerable. Ser esclava te hace más vulnerable</p>
+    <p class="notas">// ¿A CUÁNTAS DEJARON SEPULTADAS? <BR>ASESINOS</BR></p>
+     
+
+    <img class="content_image"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1653583223/SISMA/costureras/COSTURERAS_11_lekfw5.jpg"
+      alt="costureras 01">
+    <img class="content_image"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1653583223/SISMA/costureras/COSTURERAS_07_qwgu9j.jpg"
+      alt="costureras 02">
+    <img class="content_image"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1653583223/SISMA/costureras/COSTURERAS_12_chqkgl.jpg"
+      alt="costureras 03">
+    <img class="content_image"
+      src="https://res.cloudinary.com/dyk5cl3d8/image/upload/v1653583223/SISMA/costureras/COSTURERAS_06_ocjqsy.jpg"
+      alt="costureras 04">
+    <p>Archivo fotografico de Jerónimo Reyes-Retana. <br> Septiembre 2017</p>
+
+
+
+    <!-- DESASTREN NATURALES
+    <h2>Reflexiones sobre cómo nos afectan los desastres naturales a las mujeres</h2> -->
+
+    <!-- COINCIDE -->
+    <h2>Coincide</h2>
+
+  </div>
+  <!-- cierre container  -->
+  <p id="elevens">11</p>
+  <!-- abre container  -->
+  <div class="container">
+    <p> <b>Coincidió</b> <br>
+      El 19 de septiembre de 1985 la Ciudad de México sufrió un sismo devastador de magnitud 8.1. <br>
+      En el 19 de septiembre de 2017: coincidió. La Ciudad de México volvió a sufrir un sismo devastador de magnitud de
+      7.1.
+    </p>
+    <p>
+      Entre esta coincidencia, pasaron días, muchos días dónde miles de mujeres desaparecieron. Al día de hoy (24 de
+      mayo
+      del 2022) la cifra de mujeres desaparecidas en México es de 11 mujeres al día. <b>Diario coincide que 11 mujeres
+        no
+        regresan a sus casas.</b>
+    </p>
+    <p>Entre las fechas de los sismos pasaron 11,680 días, en los que aproximadamente 11 mujeres desaparecieron por día.
+      Eso significa que entre el temblor de 1985 y el de 2017, <b>128,480 mujeres desaparacieron.</b></p>
+    <!-- <p>19 (11x11,680) 19
+    Entre la coincidencia de los dos sismos más fuertes de la Ciudad de México del 19 de septiembre de 1985 y de 2017,
+    diario coincide que 11* mujeres desaparecen en el país. 11,680 días pasaron entre estas dos fechas,
+    aproximadamente 128,480 mujeres desaparecieron durante este tiempo.
+
+    *La cifra actual es de 11 desaparecidas en un día, sin duda la cifra más alta en la historia. Se repite el 11 como
+    símbolo de 1 día. -->
+
+    <p>¿Cuántas más tienen que desaparecer para que vuelva a temblar? ¿Cuántos días coincidirán con 11 mujeres
+      desaparecidas?
+      Desde el temblor del 2017, ya van 1,674 días, van 18,414 desaparecidas <b>¿Cuántas faltan?</b></p>
+    </p>
+    <h2>Alerta de Violencia de Género</h2>
+    
+    <audio controls src="sismalert_02.mp3"></audio>
+    
+
+    
+    <p>Esta alerta esta programada para reproducirse a una hora fija al día. Para recordarnos que diario estamos en
+      peligro.Se diseñó un nuevo audio
+      que sugiera un estado alaramente. toma al pública desapercibido incitando un estado de alerta, de posible ayuda.
+      Hace evidente el peligro. </p>
+
+
+    <p class=" notas">//Imagino qué sucedería si en un evento masivo todos los celulares se activaran al mismo tiempo.
+      Al
+      unisono. Quisiera hackear la alerta sísmica de la ciudad, pero que pasa si logro el mismo efecto con los celulares
+      de cada uno de los presentes en un espacio. </p>
+
+    <p class=" notas">// La alerta toma como inspiración sonidos que remiten a ciencia ficción, a lo tecnológico, a lo
+      cybrog. Todo este proyecto se impulsa por teorias cyber-feministas. Estoy usando el internet y el código como una
+      herrmienta para hacer posibles nuevas realidades.</p>
+
+
+
+    <!-- AGRADECIMIENTOS -->
+    <p>- - - - - - - - - - - -</p>
+    <p class="colofon"><b>Colofón</b> <br> Este proyecto se sigue armando de manera colectiva. He tenido la oportunidad
+      de
+      tallerear mis ideas y mi práctica
+      con muchxs. Les agradezco infinitamente todas sus aportaciones y conversaciones.
+    <p class="colofon"> Maya Ortíz / Roberta Schroeder / Jeronimo Reyes-Retana / Natalia Berrón /Karla Berrón /Rafael
+      Penroz /Bruno Díaz / Jose Álvarez
+    </p>
+
+  </div>
+
+</body>
+
+</html>
