@@ -106,7 +106,7 @@ function getTime()
     p.innerHTML = displayClock(t);
     console.log(once);
     if(!interacted)return;
-    if(t[0] === 10 && t[1] === 34 && t[2] < 30 && !once)
+    if(t[0] === 10 && t[1] === 36 && t[2] < 30 && !once)
     {
         audioContainer.currentTime = t[2];
         playAudio();
