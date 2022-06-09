@@ -16,7 +16,7 @@
 
 .container {
   /* background-color: rgb(70, 150, 150); */
-  width: 90vw;
+  width: 100vw;;
 }
 
 @media all and (min-width: 600px) {
@@ -101,8 +101,6 @@ h2 {
 #inital_box .textbox {
   text-align: left;
   padding-left: 30px;
-
-
 }
 
 .initial_image {
@@ -165,3 +163,8 @@ body {
   position: sticky;
   top: 40vh;
 } */
+
+.letritas {
+  font-size: 12px;
+  line-height: 12px;
+}
